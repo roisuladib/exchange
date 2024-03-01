@@ -1,8 +1,10 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-   name: 'Next.js + NextUI',
-   description: 'Make beautiful websites regardless of your design experience.',
+   title: 'Kwek - Cryptocurrency Exchange for Bitcoin, Ethereum & Altcoins',
+   description:
+      'Kwek cryptocurrency exchange - We operate the worlds biggest bitcoin exchange and altcoin crypto exchange in the world by volume',
+   url: 'https://kwek.roisuladib.vercel.app',
    navItems: [
       {
          label: 'Home',

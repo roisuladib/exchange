@@ -9,19 +9,77 @@ import clsx from 'clsx';
 import { ProgressBar } from '@/components';
 
 export const metadata: Metadata = {
+   metadataBase: new URL(siteConfig.url),
    title: {
-      default: siteConfig.name,
-      template: `%s - ${siteConfig.name}`,
+      default: siteConfig.title,
+      template: `%s - ${siteConfig.title}`,
    },
    description: siteConfig.description,
+   applicationName: siteConfig.title,
+   authors: {
+      name: 'roisuladib',
+      url: siteConfig.url,
+   },
+   publisher: 'roisuladib',
+   creator: 'roisuladib',
+   keywords:
+      'Blockchain Crypto Exchange, Cryptocurrency Exchange, Bitcoin Trading, Ethereum price trend, BNB, CZ, BTC price, ETH wallet registration, LTC price, Kwek, Poloniex, Bittrex',
+   robots: { index: true, follow: true },
    themeColor: [
       { media: '(prefers-color-scheme: light)', color: 'white' },
       { media: '(prefers-color-scheme: dark)', color: 'black' },
    ],
    icons: {
-      icon: '/favicon.ico',
-      shortcut: '/favicon-16x16.png',
-      apple: '/apple-touch-icon.png',
+      icon: '/favicon/favicon.ico',
+      shortcut: '/favicon/favicon-16x16.png',
+      other: [
+         {
+            rel: 'apple-touch-ico',
+            url: '/favicon/apple-touch-icon.png',
+            type: 'image/png',
+            sizes: '180x180',
+         },
+         {
+            rel: 'icon',
+            url: '/favicon/favicon-16x16.png',
+            type: 'image/png',
+            sizes: '16x16',
+         },
+         {
+            rel: 'icon',
+            url: '/favicon/favicon-32x32.png',
+            type: 'image/png',
+            sizes: '32x32',
+         },
+         {
+            rel: 'icon',
+            url: '/favicon/favicon-192x192.png',
+            type: 'image/png',
+            sizes: '192x192',
+         },
+         {
+            rel: 'icon',
+            url: '/favicon/favicon-512x512.png',
+            type: 'image/png',
+            sizes: '512x512',
+         },
+      ],
+   },
+   manifest: '/favicon/site.webmanifest',
+   openGraph: {
+      url: siteConfig.url,
+      title: siteConfig.title,
+      description: siteConfig.description,
+      siteName: siteConfig.title,
+      images: [`${siteConfig.url}/favicon/images/og.jpg`],
+      type: 'website',
+      locale: 'en_US',
+   },
+   twitter: {
+      card: 'summary_large_image',
+      title: siteConfig.title,
+      description: siteConfig.description,
+      images: [`${siteConfig.url}/favicon/images/og.jpg`],
    },
 };
 
