@@ -3,13 +3,13 @@ import { Input } from '@nextui-org/input';
 import { Kbd } from '@nextui-org/kbd';
 import { Link } from '@nextui-org/link';
 import {
+   Navbar,
    NavbarBrand,
    NavbarContent,
    NavbarItem,
    NavbarMenu,
    NavbarMenuItem,
    NavbarMenuToggle,
-   Navbar as NextUINavbar,
 } from '@nextui-org/navbar';
 import { link as linkStyles } from '@nextui-org/theme';
 import clsx from 'clsx';
@@ -27,7 +27,7 @@ import { ThemeSwitch } from '@/components/theme-switch';
 import { siteConfig } from '@/config/site';
 import Logo from '@public/favicon/android-chrome-512x512.png';
 
-export const Navbar = () => {
+export default function Header() {
    const searchInput = (
       <Input
          aria-label="Search"
@@ -52,7 +52,7 @@ export const Navbar = () => {
    );
 
    return (
-      <NextUINavbar
+      <Navbar
          maxWidth="xl"
          position="sticky">
          <NavbarContent
@@ -162,6 +162,6 @@ export const Navbar = () => {
                ))}
             </div>
          </NavbarMenu>
-      </NextUINavbar>
+      </Navbar>
    );
-};
+}
