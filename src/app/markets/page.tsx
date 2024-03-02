@@ -1,3 +1,5 @@
-export default function Markets() {
-   return <div>Markets</div>;
+import { Markets } from '@/components';
+
+export default function Page() {
+   return <Markets />;
 }
