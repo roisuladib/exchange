@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+
 import NProgress from 'nprogress';
 
 type PushStateInput = [data: any, unused: string, url?: string | URL | null | undefined];
@@ -22,7 +23,7 @@ export function ProgressBar() {
           top: 0;
           left: 0;
           width: 100%;
-          height: ${typeof height === `string` ? height : `${height}px`};
+          height: ${typeof height === 'string' ? height : `${height}px`};
         }
         /* Fancy blur effect */
         #nprogress .peg {

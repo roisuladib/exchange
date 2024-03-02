@@ -1,33 +1,31 @@
-import {
-   Navbar as NextUINavbar,
-   NavbarContent,
-   NavbarMenu,
-   NavbarMenuToggle,
-   NavbarBrand,
-   NavbarItem,
-   NavbarMenuItem,
-} from '@nextui-org/navbar';
 import { Button } from '@nextui-org/button';
+import { Input } from '@nextui-org/input';
 import { Kbd } from '@nextui-org/kbd';
 import { Link } from '@nextui-org/link';
-import { Input } from '@nextui-org/input';
-
-import { link as linkStyles } from '@nextui-org/theme';
-
-import { siteConfig } from '@/config/site';
-import NextLink from 'next/link';
-import clsx from 'clsx';
-
-import { ThemeSwitch } from '@/components/theme-switch';
 import {
-   TwitterIcon,
-   GithubIcon,
+   NavbarBrand,
+   NavbarContent,
+   NavbarItem,
+   NavbarMenu,
+   NavbarMenuItem,
+   NavbarMenuToggle,
+   Navbar as NextUINavbar,
+} from '@nextui-org/navbar';
+import { link as linkStyles } from '@nextui-org/theme';
+import clsx from 'clsx';
+import Image from 'next/image';
+import NextLink from 'next/link';
+
+import {
    DiscordIcon,
+   GithubIcon,
    HeartFilledIcon,
    SearchIcon,
+   TwitterIcon,
 } from '@/components/icons';
-
-import { Logo } from '@/components/icons';
+import { ThemeSwitch } from '@/components/theme-switch';
+import { siteConfig } from '@/config/site';
+import Logo from '@public/favicon/android-chrome-512x512.png';
 
 export const Navbar = () => {
    const searchInput = (
@@ -66,8 +64,13 @@ export const Navbar = () => {
                <NextLink
                   className="flex items-center justify-start gap-1"
                   href="/">
-                  <Logo />
-                  <p className="font-bold text-inherit">ACME</p>
+                  <Image
+                     src={Logo}
+                     width={32}
+                     height={32}
+                     alt="Kwek Logo"
+                  />
+                  <p className="font-bold text-inherit">KWEK</p>
                </NextLink>
             </NavbarBrand>
             <ul className="ml-2 hidden justify-start gap-4 lg:flex">

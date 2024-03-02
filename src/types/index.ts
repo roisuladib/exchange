@@ -4,4 +4,8 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
    size?: number;
 };
 
+export type Children = {
+   children: React.ReactNode;
+};
+
 export * from './config';

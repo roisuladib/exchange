@@ -1,3 +1,3 @@
 export default function Trade() {
-   return <div>Trade</div>;
+   return <section>Trade</section>;
 }

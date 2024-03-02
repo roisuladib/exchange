@@ -26,6 +26,10 @@ export const siteConfig = {
          label: 'About',
          href: '/about',
       },
+      {
+         label: 'Trade',
+         href: '/trade',
+      },
    ],
    navMenuItems: [
       {

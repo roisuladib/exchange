@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-import { Config } from './types';
 import { apiUrl } from './config';
+import { Config } from './types';
 
 async function fetchConfig() {
    const res = await fetch(`${apiUrl}/sonic/public/config`);
@@ -16,9 +16,9 @@ async function fetchConfig() {
 }
 
 export async function middleware(request: NextRequest) {
-   // const config = await fetchConfig();
+   const config = await fetchConfig();
    const response = NextResponse.next();
-   // response.cookies.set('config', JSON.stringify(config));
+   response.cookies.set('config', JSON.stringify(config));
    return response;
 }
 
